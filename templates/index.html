@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hello</title>
+  <style>
+    html, body {
+      font-family: sans-serif;
+      background: #f0f0f0;
+      margin: 4em;
+    }
+
+    .main {
+      background: white;
+      border: solid 1px #c0c0c0;
+      border-radius: 8px;
+      padding: 2em;
+    }
+  </style>
+</head>
+<body>
+
+  <section class="main">
+    <h1>Hello Flask</h1>
+    <p>Please run the following commands for your account before trying this app:</p>
+    <p><pre><ul><li>mkdir -p ~/ood/helloflask</li><li>chcon -R -t ood_apps_t ~/ood</li></ul></pre></p>
+    <p>Use the following URL patterns to submit/monitor jobs:
+    <ul>
+	    <li><pre>/submit?i=3&j=2</pre>Submit a new job to add i and j</li>
+	    <li><pre>/state/&lt;job_id&gt;</pre>Get the status of a submitted job</li>
+	    <li><pre>/result/&lt;job_id&gt;</pre>Get the result of a submitted job</li>
+    </ul>		    
+    <p>{{ message }}</p>
+  </section>
+
+</body>
+</html>

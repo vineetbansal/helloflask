@@ -21,15 +21,26 @@
 
   <section class="main">
     <h1>Hello Flask</h1>
+    {% block main %}
     <p>Please run the following commands for your account before trying this app:</p>
     <p><pre><ul><li>mkdir -p ~/ood/helloflask</li><li>chcon -R -t ood_apps_t ~/ood</li></ul></pre></p>
+
+    <h2>Slurm Workflow</h2>
     <p>Use the following URL patterns to submit/monitor jobs:
     <ul>
 	    <li><pre>/submit?i=3&j=2</pre>Submit a new job to add i and j</li>
 	    <li><pre>/state/&lt;job_id&gt;</pre>Get the status of a submitted job</li>
 	    <li><pre>/result/&lt;job_id&gt;</pre>Get the result of a submitted job</li>
-    </ul>		    
-    <p>{{ message }}</p>
+    </ul>		  
+  
+    <h2>Kepler Workflow</h2>
+    <p>Use the following URL patterns to submit/monitor jobs to Kepler:
+    <ul>
+	    <li><pre>/kepler/submit?i=3&j=2</pre>Submit a new job to add i and j</li>
+	    <li><pre>/kepler/state/&lt;job_id&gt;</pre>Get the status of a submitted job</li>
+	    <li><pre>/kepler/result/&lt;job_id&gt;</pre>Get the result of a submitted job</li>
+    </ul>		  
+    {% endblock %}
   </section>
 
 </body>
